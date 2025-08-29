@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Main</title>
+</head>
+
+<body class="bg-slate-600">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-white px-6">
+
+        <header class="pb-2">
+            <nav class="flex justify-between items-center pb-3">
+                <div class="flex gap-3">
+                    <div>
+                        <img class="w-[50px] h-[48px]" src="assets/Group.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-extrabold"> $ <span id="main-balance">4500</span></h1>
+                        <p class="text-[16px] text-gray-400 ">Available Balance</p>
+                    </div>
+                </div>
+                <button class="text-gray-400 border-[2px] p-[10px] rounded-[12px] font-bold">Log Out</button>
+            </nav>
+            <hr class="text-gray-400">
+
+            <section class="py-4">
+                <div>
+                    <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+                    <p class="text-[16px] text-gray-400 pt-2">Enjoy easy and convenient financial services with us.
+                        Cashout charge is low and </p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 pt-6">
+                    <div id="add-money-box" class="border-[2px] border-gray-400 p-[22px] text-center rounded-[12px]">
+                        <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
+                        <p class="text-gray-400 ">Add Money</p>
+                    </div>
+
+                    <div id="cashout-box" class="border-[2px] border-gray-400 p-[22px] text-center rounded-[12px]">
+                        <img class="w-8 mx-auto" src="assets/send1.png" alt="">
+                        <p class="text-gray-400 ">Cashout</p>
+                    </div>
+
+                    <div class="border-[2px] border-gray-400 p-[22px] text-center rounded-[12px]">
+                        <img class="w-8 mx-auto" src="assets/money1.png" alt="">
+                        <p class="text-gray-400 ">Transper Money</p>
+                    </div>
+
+                    <div class="border-[2px] border-gray-400 p-[22px] text-center rounded-[12px]">
+                        <img class="w-8 mx-auto" src="assets/bonus1.png" alt="">
+                        <p class="text-gray-400 ">Get Bonous</p>
+                    </div>
+
+                    <div class="border-[2px] border-gray-400 p-[22px] text-center rounded-[12px]">
+                        <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
+                        <p class="text-gray-400 ">Pay Bill</p>
+                    </div>
+
+                    <div id="Transactions-histry-box" class="border-[2px] border-gray-400 p-[22px] text-center rounded-[12px]">
+                        <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
+                        <p class="text-gray-400 ">Transactions</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="addMoney">
+                <h1 class="text-[18px] font-semibold pb-[16px]">Add Money</h1>
+                <div class="">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <label class="label text-[16px] font-medium">Select A Bank</label>
+                            <select id="allbank" class="select  bg-gray-100 border-none rounded-[20px] font-light text-gray-500">
+                                <option disabled selected>Select bank</option>
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nagad">Nagad</option>
+                                <option value="Rocket">Rocket</option>
+                            </select>
+
+                            <fieldset class="fieldset">
+
+                                <label class="fieldset-label label text-[16px] font-medium">Acount number</label>
+                                <input value="01301301302" id="Acount-nunber" type="number" maxlength="11"
+                                    class="input bg-gray-100 border-none rounded-[20px] font-light"
+                                    placeholder="type your  number" required />
+
+                                <label class="fieldset-label label text-[16px] font-medium">Amount </label>
+                                <input id="amount" type="number" maxlength="11"
+                                    class="input bg-gray-100 border-none rounded-[20px] font-light"
+                                    placeholder="type your  Amount" required />
+
+                                <label class="fieldset-label text-[16px] font-medium">PIN</label>
+                                <input value="1234" id="pin" type="text"
+                                    class="input  bg-gray-100 border-none rounded-[20px] font-light"
+                                    placeholder="type your PIN" required />
+
+                                <button
+                                    class="btn btn-neutral rounded-[20px] py-6 mt-4 bg-blue-600 border-none text-white text-xl font-semibold"
+                                    id="add-money" type="submit" id="login-btn"
+                                    class="btn btn-neutral bg-blue-700 mt-4">Add money
+                                </button>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section id="cashout">
+                <h1 class="text-[18px] font-semibold pb-[16px]">Cashout</h1>
+
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                        <fieldset class="fieldset">
+
+                    <label class="fieldset-label label text-[16px] font-medium">Acount number</label>
+                    <input value="01301301302" id="Acount-nunber" type="number" maxlength="11"
+                        class="input bg-gray-100 border-none rounded-[20px] font-light" placeholder="type your  number"
+                        required />
+
+                    <label class="fieldset-label label text-[16px] font-medium">Amount </label>
+                    <input id="cashout-amount" type="number" maxlength="11"
+                        class="input bg-gray-100 border-none rounded-[20px] font-light" placeholder="type your  Amount"
+                        required />
+
+                    <label class="fieldset-label text-[16px] font-medium">PIN</label>
+                    <input value="1234" id="cashout-pin" type="text"
+                        class="input  bg-gray-100 border-none rounded-[20px] font-light" placeholder="type your PIN"
+                        required />
+
+                    <button
+                        class="btn btn-neutral rounded-[20px] py-6 mt-4 bg-blue-600 border-none text-white text-xl font-semibold"
+                        id="cash-out" type="submit" id="login-btn"
+                        class="btn btn-neutral bg-blue-700 mt-4">Cashout</button>
+                </fieldset>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Transactions-histry">
+                <h1 class="text-[24px] font-bold pb-[16px]">Transactions Histry</h1>
+
+                <div id="transaction-container">
+
+                </div>
+            </section>
+        </header>
+    </section>
+
+    <!-- <script src="scrift/recap.js"></script> -->
+    <script src="scrift/addMoney.js"></script>
+    <script src="scrift/toggle.js"></script>
+    <script src="scrift/cashout.js"></script>
+    <script src="scrift/login.js"></script>
+    <script src="scrift/utilities/utilities.js"></script>
+    <!-- <script src="scrift/utilities/togglle.js"></script>-->
+     <script src="scrift/transaction.js"></script>
+</body> 
+
+</html>
