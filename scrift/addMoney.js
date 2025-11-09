@@ -23,7 +23,7 @@ document.getElementById("add-money").addEventListener('click', function (event) 
     const pin = getInputValueById("pin");
     const account = getInputValueById("Acount-nunber");
     const mainBalance = getInnerTextByID("main-balance");
-    const selectBank = getInputValueById("allbank").value
+    const selectBank = getInputValueById("allbank").value;
 
     if(amount<0){
         alert('Please input positive number')
